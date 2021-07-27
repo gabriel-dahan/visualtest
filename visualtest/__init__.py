@@ -1,0 +1,1 @@
+from .visualtest import VisualTest
