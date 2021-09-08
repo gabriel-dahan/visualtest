@@ -2,8 +2,8 @@ import inspect
 import distutils
 import distutils.util
 
-def example(x, y: int, z: bool):
-    print(f'1st param ({type(x).__name__}) : {x}\n2nd param (int) : {y}\n3rd param (bool) : {z}')
+def add(x: int, y: int) -> int:
+    print(x + y)
 
 class VisualTest(object):
 
@@ -95,7 +95,8 @@ class VisualTest(object):
         results = self.func(*values)
         if results:
             print(f"Returns: \n---------\n{results}\n---------")
+        print()
 
 if __name__ == '__main__':
-    vt = VisualTest(example)
+    vt = VisualTest(add)
     vt.run()
